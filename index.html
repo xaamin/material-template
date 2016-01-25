@@ -1,0 +1,108 @@
+<html lang="en" ng-app="violeta">
+
+<head>
+    <title>Violeta</title>
+    <link rel="stylesheet" href="./node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="./node_modules/angular-material-icons/angular-material-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+		  display: none !important;
+		}
+	</style>
+</head>
+
+<body ng-cloak ng-controller="AppCtrl" layout="row">
+	<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-sm')">
+	    <md-toolbar class="md-primary md-hue-2">
+			<div class="md-toolbar-tools">
+				<h4>Xaamin</h4>
+			</div>
+		</md-toolbar>
+		<md-list>
+			<md-subheader class="md-no-sticky">Primary actions</md-subheader>
+			<md-list-item ui-sref="#">
+			    <p> Menu One </p>
+			</md-list-item>
+			<md-list-item ui-sref="#">
+			    <p> Menu Two </p>
+			</md-list-item>
+			<md-list-item ui-sref="#">
+			    <p> Menu Three </p>
+			</md-list-item>
+			<md-list-item ui-sref="#">
+			    <p> Menu Four </p>
+			</md-list-item>
+			<md-divider></md-divider>
+			<md-subheader class="md-no-sticky">Secondary actions</md-subheader>
+			<md-list-item ui-sref="#">
+			    <p> Sub-menu One </p>
+			</md-list-item>
+			<md-list-item ui-sref="#">
+			    <p> Sub-menu Two </p>
+			</md-list-item>
+		</md-list>
+	</md-sidenav>
+
+	<div layout="column" layout-fill>
+		<md-toolbar layout="row">
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" aria-label="Settings">
+			        <ng-md-icon icon="menu"></ng-md-icon>
+			    </md-button>
+				<h4>Toolbar</h4>
+				<span flex></span>
+			    <md-button class="md-icon-button" aria-label="Favorite">
+			      	<ng-md-icon icon="more_vert"></ng-md-icon>
+		        </md-button>
+			</div>
+		</md-toolbar>
+		<md-content layout-padding flex layout-wrap>
+		    <md-list>
+		      	<md-list-item class="md-3-line md-long-text">
+	        		<ng-md-icon icon="send" size="44"></ng-md-icon> 
+			    	<div class="md-list-item-text">
+			          	<h3>Someone</h3>
+			          	<p>
+			            	Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam massa quam.
+			            Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum
+			            velit. Class aptent taciti sociosqu ad litra torquent per conubia nostra, per inceptos himenaeos.
+			          	</p>
+		        	</div>
+		      	</md-list-item>
+		      	<md-list-item class="md-3-line md-long-text">
+	        		<ng-md-icon icon="cloud" size="44"></ng-md-icon> 
+			    	<div class="md-list-item-text">
+			          	<h3>Someone</h3>
+			          	<p>
+			            	Secondary line text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam massa quam.
+			            Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum
+			            velit. Class aptent taciti sociosqu ad litra torquent per conubia nostra, per inceptos himenaeos.
+			          	</p>
+		        	</div>
+		      	</md-list-item>
+		    </md-list>
+			<p>    
+			Facete delenit argumentum cum at. Pro rebum nostrum contentiones ad. Mel exerci tritani maiorum at, mea te audire phaedrum, mel et nibh aliquam. Malis causae equidem vel eu. Noster melius vis ea, duis alterum oporteat ea sea. Per cu vide munere fierent.
+		    </p>
+		</md-content>
+	</div>	
+	
+                    
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-aria/angular-aria.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.js"></script>
+    <script src="./node_modules/angular-material/angular-material.js"></script>
+    <script src="./node_modules/angular-material-icons/angular-material-icons.js"></script>
+    <script>
+
+        // Include app dependency on ngMaterial
+
+        angular.module( 'violeta', [ 'ngMaterial', 'ngMdIcons' ] )
+            .controller("AppCtrl", function ($log) {
+            	$log.info('App started');
+            });
+
+    </script>
+</body>
+</html>

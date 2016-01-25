@@ -1,0 +1,15 @@
+{
+  "name": "angular-starter",
+  "version": "1.0.0",
+  "description": "Angular Material Template",
+  "main": "index.js",
+  "author": "Benjamín Martínez Mateos",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
+    "angular-aria": "^1.4.9",
+    "angular-material": "^1.0.2",
+    "angular-material-icons": "^0.6.0"
+  }
+}
