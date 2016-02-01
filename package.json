@@ -10,6 +10,13 @@
     "angular-animate": "^1.4.9",
     "angular-aria": "^1.4.9",
     "angular-material": "^1.0.2",
-    "angular-material-icons": "^0.6.0"
+    "angular-material-icons": "^0.6.0",
+    "angular-ui-router": "^0.2.17"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2"
   }
 }
