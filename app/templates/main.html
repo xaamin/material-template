@@ -1,0 +1,32 @@
+<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-sm')">
+	   <md-toolbar class="md-primary md-hue-2">
+		<div class="md-toolbar-tools">
+			<h4>Xaamin</h4>
+		</div>
+	</md-toolbar>
+	<md-list>
+		<md-subheader class="md-no-sticky">Primary actions</md-subheader>
+		<md-list-item ui-sref="app.home">
+			   <p> Menu One </p>
+		</md-list-item>
+		<md-list-item ui-sref="#">
+			   <p> Menu Two </p>
+		</md-list-item>
+		<md-list-item ui-sref="#">
+			   <p> Menu Three </p>
+		</md-list-item>
+		<md-list-item ui-sref="#">
+			   <p> Menu Four </p>
+		</md-list-item>
+		<md-divider></md-divider>
+		<md-subheader class="md-no-sticky">Secondary actions</md-subheader>
+		<md-list-item ui-sref="#">
+			   <p> Sub-menu One </p>
+		</md-list-item>
+		<md-list-item ui-sref="#">
+			   <p> Sub-menu Two </p>
+		</md-list-item>
+	</md-list>
+</md-sidenav>
+
+<div ui-view layout="column" layout-fill flex></div>
