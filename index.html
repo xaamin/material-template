@@ -4,6 +4,8 @@
     <title>Material Template</title>
     <link rel="stylesheet" href="./node_modules/angular-material/angular-material.css">
     <link rel="stylesheet" href="./node_modules/angular-material-icons/angular-material-icons.css">
+    <link rel="stylesheet" href="./node_modules/angular-chart.js/dist/angular-chart.min.css">
+    <link rel="stylesheet" href="./app/css/master.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 
 		This was added to enable HTML5 routing mode
@@ -16,9 +18,11 @@
 	</style>
 </head>
 
-<body ng-cloak layout="row">	
+<body ng-cloak layout="column">	
     
     <div ui-view layout="row"></div>
+    
+    <script src="./bower_components/Chart.js/Chart.min.js"></script>
 
     <script src="./node_modules/angular/angular.js"></script>
     <script src="./node_modules/angular-aria/angular-aria.js"></script>
@@ -26,6 +30,7 @@
     <script src="./node_modules/angular-material/angular-material.js"></script>
     <script src="./node_modules/angular-material-icons/angular-material-icons.js"></script>
     <script src="./node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+    <script src="./node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
     <script src="./dist/js/app.min.js"></script>
 </body>
 </html>

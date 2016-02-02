@@ -3,20 +3,22 @@
 		'ngMaterial', 
 		'ngMdIcons',
 		'ui.router',
-		'app.main' 
+        'chart.js',
+		'app.main',
+        'app.dashboard'
 	]);
 
-	app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($urlRouterProvider, $stateProvider, $locationProvider) {		
-		$urlRouterProvider.when("", "/home");
-      	$urlRouterProvider.when("/", "/home");
+	app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function ($url, $stater, $location) {		
+		$url.when("", "/home");
+      	$url.when("/", "/home");
 
-		$stateProvider
+		$stater
 
 			.state({
                 name: 'app',
                 abstract: true,
                 url: '/',
-                templateUrl : 'app/templates/main.html',
+                templateUrl : 'app/templates/menu.html',
                 controller : 'MainController as vm',
                 resolve: {
                 	something: function () {
@@ -28,20 +30,32 @@
             .state({
                 name: 'app.home',
                 url: 'home',
-                templateUrl : 'app/templates/samples/app.home.html',
-                 resolve: {
+                templateUrl : 'app/templates/samples/home.html',
+                resolve: {
                 	something: function () {
                 		console.log('Home route')
                 		return {};
                 	}
                 }
+            })
+            .state({
+                name: 'app.dashboard',
+                url: 'dashboard',
+                templateUrl : 'app/templates/samples/dashboard.html',
+                controller: 'DashboardController as vm',
+                resolve: {
+                    something: function () {
+                        console.log('Dashboard route')
+                        return {};
+                    }
+                }
             });
 
         console.log('States settings');
 
-        $urlRouterProvider.otherwise('/home');
+        $url.otherwise('/home');
 
         // use the HTML5 History API
-        $locationProvider.html5Mode(true);
+        $location.html5Mode(true);
 	}]);
 })();
