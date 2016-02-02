@@ -1,0 +1,7 @@
+{
+  "name": "material-template",
+  "private": true,
+  "dependencies": {
+    "Chart.js": "^1.0.2"
+  }
+}
