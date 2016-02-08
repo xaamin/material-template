@@ -5,7 +5,7 @@
         $log.info('Dashboard Loaded');
 
         var vm = this;
-
+        
         $timeout(function() {
             $scope.bar_labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
             $scope.bar_series = ['Series A', 'Series B', 'Series B'];
@@ -30,10 +30,6 @@
             $scope.doughnut_labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "Others"];
             $scope.doughnut_data = [300, 500, 100, 800];
           
-            $scope.onClick = function (points, evt) {
-                console.log(points, evt);
-            };
-
             $scope.pie_labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales", "Others"];
             $scope.pie_data = [300, 100, 100, 250];
 

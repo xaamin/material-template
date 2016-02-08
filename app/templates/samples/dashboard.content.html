@@ -1,0 +1,64 @@
+<md-content layout-padding flex layout-wrap>
+		
+	<div layout-gt-md="row">     
+
+	       <div flex>
+	           <h3>Bar Chart</h3>
+	           <canvas id="bar" 
+	               class="chart chart-bar"
+	               chart-data="bar_data" 
+	               chart-legend="true" 
+	               chart-labels="bar_labels" 
+	               chart-series="bar_series">
+	           </canvas>
+	       </div>	
+
+	       <div flex>
+	           <h3>Line Chart</h3>
+	           <canvas id="line" 
+	               class="chart chart-line" 
+	               chart-data="line_data"
+	               chart-labels="line_labels" 
+	               chart-legend="true" 
+	               chart-series="line_series"
+	               chart-click="onClick" >
+	           </canvas> 
+	       </div>
+
+	   </div>
+
+	   <div layout-gt-md="row">
+
+	       <div flex>
+	           <h3>Doughnut Chart</h3>
+	           <canvas id="doughnut" 
+	               class="chart chart-doughnut"
+	               chart-data="doughnut_data" 
+	               chart-legend="true" 
+	               chart-labels="doughnut_labels">
+	           </canvas> 
+	       </div>
+
+	       <div flex>
+	           <h3>Pie Chart</h3>
+	           <canvas id="pie" 
+	               class="chart chart-pie"
+	               chart-data="pie_data" 
+	               chart-legend="true" 
+	               chart-labels="pie_labels">
+	           </canvas> 
+	       </div>
+
+	       <div flex>
+	           <h3>Polar Area Chart</h3>
+	           <canvas id="polar-area" 
+	               class="chart-polar-area"
+	               chart-data="polar_data" 
+	               chart-legend="true" 
+	               chart-labels="polar_labels">
+	           </canvas> 
+	       </div>
+	       
+	   </div>
+
+</md-content>
