@@ -30,23 +30,25 @@
             .state({
                 name: 'app.home',
                 url: 'home',
-                templateUrl : 'app/templates/samples/home.html',
-                resolve: {
-                	something: function () {
-                		console.log('Home route')
-                		return {};
-                	}
+                views: {
+                    '' : {
+                        templateUrl : 'app/templates/samples/home.html'
+                    },
+                    'content@app.home': {
+                        templateUrl : 'app/templates/samples/home.content.html'
+                    }
                 }
             })
             .state({
                 name: 'app.dashboard',
                 url: 'dashboard',
-                templateUrl : 'app/templates/samples/dashboard.html',
-                controller: 'DashboardController as vm',
-                resolve: {
-                    something: function () {
-                        console.log('Dashboard route')
-                        return {};
+                views: {
+                    '' : {
+                        templateUrl : 'app/templates/samples/dashboard.html'
+                    },
+                    'content@app.dashboard': {
+                        templateUrl : 'app/templates/samples/dashboard.content.html',
+                        controller: 'DashboardController as vm'
                     }
                 }
             });
@@ -58,4 +60,22 @@
         // use the HTML5 History API
         $location.html5Mode(true);
 	}]);
+
+    app.directive('contactItem', function () {
+        return {
+            restrict: 'E',
+            scope: {
+                data: '=',
+                edit: '&',
+            },
+            template: '{{data.name}} | {{data.email}} <md-button class="md-raised md-warn" ng-click="edit()">Edit contact</md-button>'
+        };
+    });
+
+    app.directive('menuToggler', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'app/templates/directives/menu-toggle.html'
+        };
+    });
 })();
